@@ -2,25 +2,29 @@ import streamlit as st
 
 st.set_page_config(page_title="Outils de génération", page_icon="⚙️")
 
-st.title("Bienvenue sur ton générateur !")
+st.title("Bienvenue sur ton générateur personnel ⚙️")
 
-menu = st.selectbox("Choisis un outil 👇", [
-    "--- Choisis un outil ---",
-    "🏷️ Générateur Markdown (.md)",
-    "📝 Générateur Word Stylé (.docx)"
-])
+st.markdown("---")
 
-# Ne redirige que si un vrai choix est fait
-if menu == "🏷️ Générateur Markdown (.md)":
-    st.write("Redirection en cours...")
-    st.markdown(
-        "<meta http-equiv='refresh' content='0;url=https://md-generator.streamlit.app'>",
-        unsafe_allow_html=True
-    )
+st.subheader("📄 Générateur Markdown (.md)")
+st.markdown(
+    """
+    🔹 Crée ton fichier Markdown stylé automatiquement à partir de règles simples.<br>
+    👉 [Lancer le générateur Markdown](https://md-generator.streamlit.app)
+    """,
+    unsafe_allow_html=True
+)
 
-elif menu == "📝 Générateur Word Stylé (.docx)":
-    st.write("Redirection en cours...")
-    st.markdown(
-        "<meta http-equiv='refresh' content='0;url=https://word-generator-style.streamlit.app'>",
-        unsafe_allow_html=True
-    )
+st.markdown("---")
+
+st.subheader("📝 Générateur Word Stylé (.docx)")
+st.markdown(
+    """
+    🔹 Transforme un fichier Markdown en un document Word stylisé avec tes préférences.<br>
+    👉 [Lancer le générateur Word Stylé](https://word-generator-style.streamlit.app)
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown("---")
+st.info("Choisis ton outil ci-dessus et laisse la magie opérer ✨")
